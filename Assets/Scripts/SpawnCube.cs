@@ -22,7 +22,8 @@ public class SpawnCube : MonoBehaviour
     }
 
     private void OnHandHoverBegin(Hand hand)
-    {
-        Instantiate(itemToSpawn, spawnLocation);
+    {   
+        
+        Instantiate(itemToSpawn, spawnLocation.position, Quaternion.identity);
     }
 }
