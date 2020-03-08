@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IfCollidingConveryer : MonoBehaviour
 {
+    public float thrust;
     private Vector3 direction;
     public Rigidbody rb;
     // Start is called before the first frame update
@@ -13,9 +14,9 @@ public class IfCollidingConveryer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        rb.AddForce(direction * 2.0f, ForceMode.Acceleration);
     }
 
 
@@ -32,8 +33,9 @@ public class IfCollidingConveryer : MonoBehaviour
         if (collision.collider.tag == "ConveyerBelt")
         {
 
-            transform.Translate(direction* Time.deltaTime);
-            //rb.AddForce(direction, ForceMode.Acceleration);
+            //transform.Translate(direction* Time.deltaTime);
+            
+            rb.AddForce(direction* thrust, ForceMode.Acceleration);
         }
     }
 

@@ -1367,7 +1367,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConveyerBelt (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: f509a2e0402176c47ab166adb19e0925, type: 3}
 --- !u!1001 &3204293168616473176
 PrefabInstance:
