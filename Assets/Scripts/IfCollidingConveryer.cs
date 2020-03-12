@@ -31,7 +31,7 @@ public class IfCollidingConveryer : MonoBehaviour
     {
         if (collision.collider.tag == "ConveyerBelt")
         {
-
+            Debug.Log(direction);
             transform.Translate(direction* Time.deltaTime);
             //rb.AddForce(direction, ForceMode.Acceleration);
         }
